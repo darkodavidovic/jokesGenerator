@@ -6,20 +6,41 @@
 </head>
 
 <body class="bg-color">
-    
-    <header>
-        <p>Ucimo webpack i pozivanje REST Api servisa.</p>
-        <button id="logoutButton">Logoutt</button>
-    </header>
 
-    <form>
-        <label>Username</label>
-        <input type="text" id="username" />
-        <br />
-        <label>Password</label>
-        <input type="password" id="password" />
-        <button id="loginButton">Login</button>
-    </form>
+    <div id="login-screen">
+
+        <header>
+            <p>Ucimo webpack i pozivanje REST Api servisa.</p>
+        </header>
+
+        <main class="login-main">
+            <form>
+                <label>Username</label>
+                <input type="text" id="username" value="Engin"/>
+                <br />
+                <label>Password</label>
+                <input type="password" id="password" value="Bulic007"/>
+                <button type="button" id="loginButton">Login</button>
+            </form>
+
+        </main>
+    </div>
+
+    <div id="app-screen">
+        <header>
+            <p>Ucimo webpack i pozivanje REST Api servisa.</p>
+            <button id="logoutButton">Logoutt</button>
+        </header>
+
+        <main class="app-main">
+            <h1>Jokes</h1>
+            <button id="get-joke-button">Get Joke</button>
+
+            <div id="joke-container">
+
+            </div>
+        </main>
+    </div>
 
     <script src="main.js"></script>
 </body>

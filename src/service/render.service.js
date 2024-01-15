@@ -1,3 +1,7 @@
+
+import { authService } from "..";
+import { appScreen, jokeContainer, loginScreen } from "../selectors";
+
 class RenderService {
 
     constructor() {
@@ -5,8 +9,20 @@ class RenderService {
         this.jokesURL = "https://icanhazdadjoke.com/"
     }
 
-    renderJoke() {
-        
+    renderScreens() {
+        if (authService.isAuthenticated()) {
+            loginScreen.style.display = "none";
+            appScreen.style.display = "block";
+            return
+        }
+        loginScreen.style.display = "block";
+        appScreen.style.display = "none";
+    }
+
+    renderJoke(joke) {
+        if (authService.isAuthenticated()) {
+            jokeContainer.innerHTML = `<p>${joke}</p>`
+        }
     }
 }
 
