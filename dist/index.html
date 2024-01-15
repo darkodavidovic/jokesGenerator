@@ -5,7 +5,7 @@
     <title>Vezbe JS i Webpack</title>
 </head>
 
-<body class="bg-color">
+<body>
 
     <div id="login-screen">
 
@@ -14,12 +14,18 @@
         </header>
 
         <main class="login-main">
+            <h1>Login Screen</h1>
             <form>
-                <label>Username</label>
-                <input type="text" id="username" value="Engin"/>
+                <div>
+                    <label>Username</label>
+                    <input type="text" id="username" value="Engin" />
+                </div>
                 <br />
-                <label>Password</label>
-                <input type="password" id="password" value="Bulic007"/>
+                <div>
+                    <label>Password</label>
+                    <input type="password" id="password" value="Bulic007" />
+                </div>
+                <br />
                 <button type="button" id="loginButton">Login</button>
             </form>
 
@@ -29,12 +35,12 @@
     <div id="app-screen">
         <header>
             <p>Ucimo webpack i pozivanje REST Api servisa.</p>
-            <button id="logoutButton">Logoutt</button>
+            <button id="logoutButton">Logout</button>
         </header>
 
         <main class="app-main">
-            <h1>Jokes</h1>
-            <button id="get-joke-button">Get Joke</button>
+            <h1>Joke Screen</h1>
+            <button id="get-joke-button">Get Joke 😜</button>
 
             <div id="joke-container">
 
