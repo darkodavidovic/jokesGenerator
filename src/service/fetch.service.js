@@ -1,22 +1,15 @@
 import axios from "axios";
-import { renderService } from "..";
+import { renderJoke } from "./render.service";
 
-class FetchService {
+const jokesURL = "https://icanhazdadjoke.com/"
 
-    constructor() {
-        this.jokesURL = "https://icanhazdadjoke.com/"
-    }
-    
-    async getRandomJoke() {
-        let config = {
-            headers: {
-                Accept: "application/json",
-            },
-        };
-        axios.get(this.jokesURL, config)
-            .then(res => renderService.renderJoke(res.data.joke))
-            .catch(error => console.log(error));
-    }
+export async function getRandomJoke() {
+    let config = {
+        headers: {
+            Accept: "application/json",
+        },
+    };
+    axios.get(jokesURL, config)
+        .then(res => renderJoke(res.data.joke))
+        .catch(error => console.log(error));
 }
-
-export default FetchService;
